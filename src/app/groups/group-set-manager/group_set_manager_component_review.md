@@ -3,7 +3,8 @@
 
 ## Team Member Name
 
-[Your Name Here]
+AMOS SAJI
+Studen ID: 221118434
 
 ## Component Name
 
@@ -17,10 +18,6 @@ Files included in this component:
 ## Component Purpose
 
 The purpose of the `group-set-manager` component is to manage group memberships within a group set context, primarily for tutors. This component allows the addition and removal of group members and updates to group information. It provides an interface for managing group members, updating group names, and handling toolbar visibility based on user roles.
-
-### Screenshots
-
-[Add screenshots of the component interface here]
 
 ## Component Outcomes and Interactions
 
@@ -62,7 +59,3 @@ Interactions:
 - [ ] Handles errors such as missing or invalid group details.
 - [ ] Toolbar visibility correctly toggles based on user role.
 - [ ] All functionalities are migrated and working correctly in TypeScript.
-
-## Discussion with Client (Andrew Cain)
-
-[Add notes from your discussion with Andrew Cain regarding any additional considerations, feedback, or potential changes required for the migration of this component.]
