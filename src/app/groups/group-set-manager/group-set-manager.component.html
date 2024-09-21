@@ -1,4 +1,4 @@
-<group-selector
+<!-- <group-selector
   [unit]="unit"
   [unit-role]="unitRole"
   [project]="project"
@@ -7,8 +7,7 @@
   [show-group-set-selector]="showGroupSetSelector"
   (on-select)="newGroupSelected()"
   class="mat-card mat-card-primary"
->
-</group-selector>
+></group-selector> -->
 
 <mat-card *ngIf="selectedGroup">
   <mat-card-header>
@@ -44,11 +43,11 @@
     </form>
   </mat-card-content>
 
-  <group-member-list
+  <!-- <group-member-list
     [unit]="unit"
     [unit-role]="unitRole"
     [project]="project"
     [selected-group]="selectedGroup"
     (on-members-loaded)="groupMembersLoaded()"
-  ></group-member-list>
+  ></group-member-list> -->
 </mat-card>
