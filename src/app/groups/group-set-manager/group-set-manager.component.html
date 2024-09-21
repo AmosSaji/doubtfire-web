@@ -33,21 +33,26 @@
           [(ngModel)]="selectedStudent"
           name="selectedStudent"
           [matAutocomplete]="auto"
-          [typeahead]="project as project.student.name for project in unit.studentsForGroupTypeAhead(selectedGroup) | projectFilter:$viewValue | limitTo:8"
-          (typeaheadOnSelect)="addMember(selectedStudent)"
+          (input)="filterStudents($event.target.value)"
         />
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addMember($event.option.value)">
+          <mat-option *ngFor="let student of filteredStudents | async" [value]="student">
+            {{ student.name }}
+          </mat-option>
+        </mat-autocomplete>
       </mat-form-field>
+
       <button mat-raised-button color="primary" type="submit" [disabled]="!selectedStudent.id">
         <mat-icon>add</mat-icon> Add Member
       </button>
     </form>
   </mat-card-content>
 
-  <!-- <group-member-list
+  <group-member-list
     [unit]="unit"
     [unit-role]="unitRole"
     [project]="project"
     [selected-group]="selectedGroup"
     (on-members-loaded)="groupMembersLoaded()"
-  ></group-member-list> -->
+  ></group-member-list>
 </mat-card>
